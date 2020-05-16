@@ -26,11 +26,7 @@ class Customer {
 
         while (enum_rentals.hasMoreElements()) {
             Rental actualRental = (Rental) enum_rentals.nextElement();
-            // add frequent renter points
-            frequentRenterPoints ++;
-            // add bonus for a two day new release rental
-            if ((actualRental.getMovie().getPriceCode() == Movie.NEW_RELEASE) && actualRental.getDaysRented() > 1)
-                frequentRenterPoints ++;
+            frequentRenterPoints += actualRental.getFrequentRenterPoints();
             //show figures for this rental
             completeStatement += "\t" + actualRental.getMovie().getTitle()+ "\t" + "\t" + actualRental.getDaysRented() + "\t" + (actualRental.getCharge()) + "\n";
             totalAmount += actualRental.getCharge();
