@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12797de5-39ec-48da-a6a0-5c048b24f510" name="Default Changelist" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/CustomerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/MovieTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/RentalTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/se-homework-refactoring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/se-homework-refactoring.iml" afterDir="false" />
+    <list default="true" id="12797de5-39ec-48da-a6a0-5c048b24f510" name="Default Changelist" comment="Replacing the Conditional Logic on Rental with Polymorphism">
+      <change afterPath="$PROJECT_DIR$/src/main/ChildrensPrice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/NewReleasePrice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Price.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/RegularPrice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/production/se-homework-refactoring/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/production/se-homework-refactoring/Customer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/production/se-homework-refactoring/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/production/se-homework-refactoring/Movie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/production/se-homework-refactoring/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/production/se-homework-refactoring/Program.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/production/se-homework-refactoring/Rental.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/production/se-homework-refactoring/Rental.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Rental.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Rental.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,58 +25,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Customer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#162#163#0" expanded="true" />
-                <element signature="e#192#193#0" expanded="true" />
-                <element signature="e#234#235#0" expanded="true" />
-                <element signature="e#273#274#0" expanded="true" />
-                <element signature="e#303#304#0" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Movie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+            <state relative-caret-position="628">
+              <caret line="41" column="62" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
               <folding>
-                <element signature="e#491#492#0" expanded="true" />
-                <element signature="e#519#520#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/tests/CustomerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#304#305#0" expanded="true" />
-                <element signature="e#329#330#0" expanded="true" />
+                <element signature="e#309#310#0" expanded="true" />
+                <element signature="e#341#342#0" expanded="true" />
+                <element signature="e#948#949#0" expanded="true" />
+                <element signature="e#973#974#0" expanded="true" />
+                <element signature="e#1054#1055#0" expanded="true" />
+                <element signature="e#1123#1124#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tests/MovieTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/Price.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="24" column="63" lean-forward="true" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+            <state relative-caret-position="115">
+              <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/RegularPrice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#59#60#0" expanded="true" />
+                <element signature="e#86#87#0" expanded="true" />
+                <element signature="e#322#323#0" expanded="true" />
+                <element signature="e#345#346#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/ChildrensPrice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <folding>
+                <element signature="e#59#60#0" expanded="true" />
+                <element signature="e#96#97#0" expanded="true" />
+                <element signature="e#329#330#0" expanded="true" />
+                <element signature="e#352#353#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/NewReleasePrice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#60#61#0" expanded="true" />
+                <element signature="e#87#88#0" expanded="true" />
+                <element signature="e#139#140#0" expanded="true" />
+                <element signature="e#176#177#0" expanded="true" />
+                <element signature="e#226#227#0" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,10 +102,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Arquillian JUnit Test Class" />
         <option value="FxmlFile" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -107,13 +119,17 @@
         <option value="$PROJECT_DIR$/src/Customer.java" />
         <option value="$PROJECT_DIR$/src/Movie.java" />
         <option value="$PROJECT_DIR$/src/RentalTest.java" />
-        <option value="$PROJECT_DIR$/src/main/Program.java" />
-        <option value="$PROJECT_DIR$/src/main/Customer.java" />
-        <option value="$PROJECT_DIR$/src/main/Rental.java" />
-        <option value="$PROJECT_DIR$/src/main/Movie.java" />
         <option value="$PROJECT_DIR$/src/tests/RentalTest.java" />
         <option value="$PROJECT_DIR$/src/tests/MovieTest.java" />
         <option value="$PROJECT_DIR$/src/tests/CustomerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/Program.java" />
+        <option value="$PROJECT_DIR$/src/main/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/Rental.java" />
+        <option value="$PROJECT_DIR$/src/main/Price.java" />
+        <option value="$PROJECT_DIR$/src/main/ChildrensPrice.java" />
+        <option value="$PROJECT_DIR$/src/main/RegularPrice.java" />
+        <option value="$PROJECT_DIR$/src/main/NewReleasePrice.java" />
+        <option value="$PROJECT_DIR$/src/main/Movie.java" />
       </list>
     </option>
   </component>
@@ -139,6 +155,12 @@
               <item name="se-homework-refactoring" type="b2602c69:ProjectViewProjectNode" />
               <item name="se-homework-refactoring" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="se-homework-refactoring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="se-homework-refactoring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="se-homework-refactoring" type="b2602c69:ProjectViewProjectNode" />
@@ -233,7 +255,7 @@
       <option name="presentableId" value="Default" />
       <updated>1589633913922</updated>
       <workItem from="1589633917951" duration="2499000" />
-      <workItem from="1589636539678" duration="5117000" />
+      <workItem from="1589636539678" duration="7626000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1589634083892</created>
@@ -249,40 +271,70 @@
       <option name="project" value="LOCAL" />
       <updated>1589639676948</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add Tests">
+      <created>1589644507084</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589644507084</updated>
+    </task>
+    <task id="LOCAL-00004" summary="rename Variables">
+      <created>1589645479296</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589645479296</updated>
+    </task>
+    <task id="LOCAL-00005" summary="move and rename Method amountFor">
+      <created>1589646778953</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589646778953</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_se-homework-refactoring - 2020.05.16 at 17h 21m 25s.xml">
-      <configuration name="All in se-homework-refactoring" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_se-homework-refactoring - 2020.05.16 at 17h 22m 50s.xml">
-      <configuration name="All in se-homework-refactoring" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_se-homework-refactoring - 2020.05.16 at 17h 28m 12s.xml">
-      <configuration name="All in se-homework-refactoring" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_se-homework-refactoring - 2020.05.16 at 17h 28m 36s.xml">
-      <configuration name="All in se-homework-refactoring" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_se-homework-refactoring - 2020.05.16 at 17h 32m 33s.xml">
-      <configuration name="All in se-homework-refactoring" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_se-homework-refactoring - 2020.05.16 at 17h 52m 01s.xml">
       <configuration name="All in se-homework-refactoring" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_se-homework-refactoring - 2020.05.16 at 17h 53m 16s.xml">
       <configuration name="All in se-homework-refactoring" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_se-homework-refactoring - 2020.05.16 at 17h 54m 33s.xml">
+      <configuration name="All in se-homework-refactoring" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_se-homework-refactoring - 2020.05.16 at 18h 13m 16s.xml">
+      <configuration name="All in se-homework-refactoring" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_se-homework-refactoring - 2020.05.16 at 18h 30m 48s.xml">
+      <configuration name="All in se-homework-refactoring" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_se-homework-refactoring - 2020.05.16 at 19h 58m 25s.xml">
+      <configuration name="All in se-homework-refactoring" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_se-homework-refactoring - 2020.05.16 at 20h 00m 40s.xml">
+      <configuration name="All in se-homework-refactoring" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_se-homework-refactoring - 2020.05.16 at 20h 06m 58s.xml">
+      <configuration name="All in se-homework-refactoring" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_se-homework-refactoring - 2020.05.16 at 20h 13m 29s.xml">
+      <configuration name="All in se-homework-refactoring" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_se-homework-refactoring - 2020.05.16 at 20h 18m 18s.xml">
+      <configuration name="All in se-homework-refactoring" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7616000" />
+    <option name="totallyTimeSpent" value="12368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1410" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.113275036" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.113275036" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -291,7 +343,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32811275" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32811275" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32654658" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -301,9 +353,9 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32811275" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32732967" />
       <window_info anchor="bottom" id="Flutter Performance" order="13" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32889584" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32811275" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -357,7 +409,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="add Tests" />
+    <MESSAGE value="rename Variables" />
+    <MESSAGE value="move and rename Method amountFor" />
+    <option name="LAST_COMMIT_MESSAGE" value="move and rename Method amountFor" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Fowler.iml">
@@ -373,35 +428,53 @@
     <entry file="file://$PROJECT_DIR$/atlassian-ide-plugin.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RentalTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Program.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Rental.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-          <folding>
-            <element signature="e#222#223#0" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RentalTest.java" />
     <entry file="file://$PROJECT_DIR$/src/tests/RentalTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/CustomerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="48" column="50" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Rental.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding>
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -416,41 +489,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Price.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/ChildrensPrice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding>
+            <element signature="e#59#60#0" expanded="true" />
+            <element signature="e#96#97#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/RegularPrice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding>
+            <element signature="e#59#60#0" expanded="true" />
+            <element signature="e#86#87#0" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#345#346#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/NewReleasePrice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#60#61#0" expanded="true" />
+            <element signature="e#87#88#0" expanded="true" />
+            <element signature="e#139#140#0" expanded="true" />
+            <element signature="e#176#177#0" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Movie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        <state relative-caret-position="628">
+          <caret line="41" column="62" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
           <folding>
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#162#163#0" expanded="true" />
-            <element signature="e#192#193#0" expanded="true" />
-            <element signature="e#234#235#0" expanded="true" />
-            <element signature="e#273#274#0" expanded="true" />
-            <element signature="e#303#304#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/CustomerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#304#305#0" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#948#949#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+            <element signature="e#1123#1124#0" expanded="true" />
           </folding>
         </state>
       </provider>
