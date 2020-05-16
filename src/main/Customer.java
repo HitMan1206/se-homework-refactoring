@@ -19,7 +19,7 @@ class Customer {
 
     String statement() {
         Enumeration enum_rentals = _rentals.elements();
-        String completeStatement = "main.Rental Record for " + this.getName() + "\n";
+        String completeStatement = "Rental Record for " + this.getName() + "\n";
         completeStatement += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
 
         while (enum_rentals.hasMoreElements()) {
@@ -31,6 +31,20 @@ class Customer {
         completeStatement += "Amount owed is " + (getTotalCharge()) + "\n";
         completeStatement += "You earned " + (getTotalFrequentRenterPoints()) + " frequent renter points";
         return completeStatement;
+    }
+
+    private String htmlStatement() {
+        Enumeration enum_rentals = _rentals.elements();
+        String completeHtmlStatement = "<H1>Rentals for <EM>" + getName() + "</EM></ H1><P>\n";
+        while (enum_rentals.hasMoreElements()) {
+            Rental each = (Rental) enum_rentals.nextElement();
+            //show figures for each rental
+            completeHtmlStatement += each.getMovie().getTitle() + ": " + (each.getCharge()) + "<BR>\n";
+        }
+        //add footer lines
+        completeHtmlStatement += "<P>You owe <EM>" + (getTotalCharge()) + "</EM><P>\n";
+        completeHtmlStatement += "On this rental you earned <EM>" + (getTotalFrequentRenterPoints()) + "</EM> frequent renter points<P>";
+        return completeHtmlStatement;
     }
 
     private double getTotalCharge(){
