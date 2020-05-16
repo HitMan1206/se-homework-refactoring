@@ -5,19 +5,19 @@ class Customer {
     private String name;
     private Vector rentals = new Vector();
 
-    public Customer (String newname){
+    Customer (String newname){
         name = newname;
     }
 
-    public void addRental(Rental arg) {
+    void addRental(Rental arg) {
         rentals.addElement(arg);
     }
 
-    public String getName (){
+    String getName (){
         return name;
     }
 
-    public String statement() {
+    String statement() {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
         Enumeration enum_rentals = rentals.elements();
@@ -28,7 +28,7 @@ class Customer {
             double thisAmount;
             Rental actualRental = (Rental) enum_rentals.nextElement();
             //determine amounts for each line
-            thisAmount = amountFor(actualRental);
+            thisAmount = actualRental.getCharge();
             // add frequent renter points
             frequentRenterPoints ++;
             // add bonus for a two day new release rental
@@ -43,26 +43,5 @@ class Customer {
         completeStatement += "You earned " + (frequentRenterPoints) + " frequent renter points";
         return completeStatement;
     }
-
-    private double amountFor(Rental oneRental) {
-        double thisAmount = 0;
-        switch (oneRental.getMovie().getPriceCode()) {
-            case Movie.REGULAR:
-                thisAmount += 2;
-                if (oneRental.getDaysRented() > 2)
-                    thisAmount += (oneRental.getDaysRented() - 2) * 1.5;
-                break;
-            case Movie.NEW_RELEASE:
-                thisAmount += oneRental.getDaysRented() * 3;
-                break;
-            case Movie.CHILDRENS:
-                thisAmount += 1.5;
-                if (oneRental.getDaysRented() > 3)
-                    thisAmount += (oneRental.getDaysRented() - 3) * 1.5;
-                break;
-        }
-        return thisAmount;
-    }
-
 }
     
