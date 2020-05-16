@@ -33,7 +33,7 @@ class Customer {
         return completeStatement;
     }
 
-    private String htmlStatement() {
+    String htmlStatement() {
         Enumeration enum_rentals = _rentals.elements();
         String completeHtmlStatement = "<H1>Rentals for <EM>" + getName() + "</EM></ H1><P>\n";
         while (enum_rentals.hasMoreElements()) {
